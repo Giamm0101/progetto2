@@ -3,3 +3,5 @@ class Config:
     MYSQL_USER = 'root'
     MYSQL_PASSWORD = ''
     MYSQL_DB = 'library'
+
+print("ciao")
