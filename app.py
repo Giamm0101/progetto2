@@ -121,7 +121,15 @@ def delete_data2(id):
     print('eliminato id: ', id)
     return redirect(url_for('book'))
 
+@app.route('/user')
+def user():
+    users = execute_query('SELECT * FROM user')
+    return render_template('user.html', users=users)
 
+@app.route('/api/user')
+def api_user():
+    users = execute_query('SELECT * FROM user')
+    return users
 
 if __name__ == '__main__':
     app.run(debug=True)
