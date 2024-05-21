@@ -124,7 +124,7 @@ def delete_data2(id):
 @app.route('/user')
 def user():
     users = execute_query('SELECT * FROM user')
-    return render_template('user.html', users=users)
+    return render_template('users.html', users=users)
 
 @app.route('/api/user')
 def api_user():
